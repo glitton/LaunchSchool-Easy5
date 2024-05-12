@@ -13,9 +13,10 @@ console.log(interleave([1, 2, 3], ["a", "b", "c"]));
 //Using forEach
 function interleave(arr1, arr2) {
   //Assumptions: Lengths are equal, arrays are not empty
-  let finalArray = [];
-  (arr1, arr2).forEach((index) => finalArray.push(arr1[index], arr2[index]));
-  return finalArray;
+  arr2.forEach((item) => {
+    arr1.push(item);
+  });
+  console.log(arr1);
 }
 
 console.log(interleave([1, 2, 3], ["a", "b", "c"]));
